@@ -345,6 +345,10 @@ section{padding:104px 0;position:relative}
   background-image:linear-gradient(180deg,rgba(11,37,69,.46) 0%,rgba(11,37,69,.88) 100%),
     url("images/skyline-sf.jpg");
 }
+.city-sh{
+  background-image:linear-gradient(180deg,rgba(11,37,69,.46) 0%,rgba(11,37,69,.88) 100%),
+    url("images/skyline-sh.jpg");
+}
 .city:hover{border-color:rgba(184,148,95,.6);transform:translateX(4px)}
 .city .mark{position:absolute;top:18px;right:22px;width:9px;height:9px;border-radius:50%;
   background:var(--gold-light);box-shadow:0 0 0 5px rgba(212,180,131,.18)}
@@ -431,6 +435,19 @@ footer{background:#08172e;color:rgba(255,255,255,.42);
 footer .fbrand{color:rgba(255,255,255,.72);font-size:14.5px;margin-bottom:8px;
   letter-spacing:.6px}
 
+/* ============ 语言切换 ============ */
+.lang-switch{display:flex;flex-shrink:0}
+.lang-switch button{
+  background:none;border:1px solid var(--line);padding:5px 12px;font-size:12px;
+  cursor:pointer;color:var(--grey);letter-spacing:.5px;transition:.3s;font-family:inherit;
+}
+.lang-switch button:first-child{border-radius:4px 0 0 4px}
+.lang-switch button:last-child{border-radius:0 4px 4px 0;border-left:none}
+.lang-switch button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.en-text{display:none}
+body.lang-en .zh-text{display:none!important}
+body.lang-en .en-text{display:inline}
+
 /* ============ 动画 ============ */
 .reveal{opacity:0;transform:translateY(28px);
   transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
@@ -503,22 +520,25 @@ footer .fbrand{color:rgba(255,255,255,.72);font-size:14.5px;margin-bottom:8px;
     <div class="hero-inner">
       <div class="hero-text">
         <div class="eyebrow reveal">MHP Law Firm · Shanghai</div>
-        <h1 class="reveal d1">以专业为基<br><em>以创新为翼</em></h1>
+        <h1 class="reveal d1">
+          <span class="zh-text">以专业为基<br><em>以创新为翼</em></span>
+          <span class="en-text">Built on Expertise,<br><em>Driven by Innovation</em></span>
+        </h1>
         <p class="sub reveal d2">
-          程轶婧律师，上海市君悦律师事务所，<br>
-          中美涉外律师，中英文均可工作。专注公司法与股东纠纷、劳动争议及商事争议解决。
+          <span class="zh-text">程轶婧律师，上海市君悦律师事务所，中美涉外律师。<br>专注公司法与股东纠纷、劳动争议及商事争议解决。</span>
+          <span class="en-text">Yijing Cheng, Attorney at MHP Law Firm (Shanghai).<br>China-US cross-border lawyer focusing on corporate &amp; equity disputes, labor disputes and commercial dispute resolution.</span>
         </p>
         <div class="hero-tags reveal d3">
-          <span>公司股权</span>
-          <span>股东纠纷</span>
-          <span>公司治理</span>
-          <span>商事争议解决</span>
-          <span>劳动纠纷</span>
-          <span>涉外法律服务</span>
+          <span><span class="zh-text">公司股权</span><span class="en-text">Corporate Equity</span></span>
+          <span><span class="zh-text">股东纠纷</span><span class="en-text">Shareholder Disputes</span></span>
+          <span><span class="zh-text">公司治理</span><span class="en-text">Corporate Governance</span></span>
+          <span><span class="zh-text">商事争议解决</span><span class="en-text">Commercial Litigation</span></span>
+          <span><span class="zh-text">劳动纠纷</span><span class="en-text">Labor Disputes</span></span>
+          <span><span class="zh-text">涉外法律服务</span><span class="en-text">Cross-Border Legal Services</span></span>
         </div>
         <div class="hero-cta reveal d4">
-          <a href="#about" class="btn btn-gold">了解专业背景</a>
-          <a href="#contact" class="btn btn-ghost">联系方式</a>
+          <a href="#about" class="btn btn-gold"><span class="zh-text">了解专业背景</span><span class="en-text">Professional Background</span></a>
+          <a href="#contact" class="btn btn-ghost"><span class="zh-text">联系方式</span><span class="en-text">Contact</span></a>
         </div>
       </div>
 
@@ -547,14 +567,18 @@ footer .fbrand{color:rgba(255,255,255,.72);font-size:14.5px;margin-bottom:8px;
       <small>Yijing Cheng</small>
     </div>
     <div class="nav-links">
-      <a href="#about">关于我</a>
-      <a href="#expertise">专业领域</a>
-      <a href="#education">教育背景</a>
-      <a href="#cases">代表业绩</a>
-      <a href="#global">涉外业务</a>
-      <a href="#training">专业培训</a>
-      <a href="#articles">实务文章</a>
-      <a href="#contact">联系方式</a>
+      <a href="#about"><span class="zh-text">关于我</span><span class="en-text">About</span></a>
+      <a href="#expertise"><span class="zh-text">专业领域</span><span class="en-text">Expertise</span></a>
+      <a href="#education"><span class="zh-text">教育背景</span><span class="en-text">Education</span></a>
+      <a href="#cases"><span class="zh-text">代表业绩</span><span class="en-text">Experience</span></a>
+      <a href="#global"><span class="zh-text">涉外业务</span><span class="en-text">Cross-Border</span></a>
+      <a href="#training"><span class="zh-text">专业培训</span><span class="en-text">Training</span></a>
+      <a href="#articles"><span class="zh-text">实务文章</span><span class="en-text">Insights</span></a>
+      <a href="#contact"><span class="zh-text">联系方式</span><span class="en-text">Contact</span></a>
+    </div>
+    <div class="lang-switch">
+      <button id="btn-zh" class="active" onclick="setLang('zh')">CN</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
     </div>
   </div>
 </nav>
@@ -564,64 +588,73 @@ footer .fbrand{color:rgba(255,255,255,.72);font-size:14.5px;margin-bottom:8px;
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="num">01 / ABOUT</div>
-      <h2>关于我</h2>
+      <h2><span class="zh-text">关于我</span><span class="en-text">About Me</span></h2>
       <div class="gold-line"></div>
     </div>
 
     <div class="about-grid">
       <div class="about-text">
         <p class="reveal">
-          程轶婧律师是<a href="https://www.mhplawyer.com/" target="_blank" rel="noopener" style="color:var(--navy-3);text-decoration:none;border-bottom:1px solid var(--line)"><strong>上海市君悦律师事务所</strong></a>律师，<strong>君悦律师事务所证券与上市委员会委员</strong>，中美涉外律师，中英文均可工作。
+          <span class="zh-text">程轶婧律师是<a href="https://www.mhplawyer.com/" target="_blank" rel="noopener" style="color:var(--navy-3);text-decoration:none;border-bottom:1px solid var(--line)"><strong>上海市君悦律师事务所</strong></a>律师，<strong>君悦律师事务所证券与上市委员会委员</strong>，中美涉外律师。</span>
+          <span class="en-text">Yijing Cheng is an attorney at <a href="https://www.mhplawyer.com/" target="_blank" rel="noopener" style="color:var(--navy-3);text-decoration:none;border-bottom:1px solid var(--line)"><strong>MHP Law Firm (Shanghai Junyue Law Offices)</strong></a>, a member of the firm's <strong>Securities &amp; Capital Markets Committee</strong>, and a China-US cross-border lawyer working in both Chinese and English.</span>
         </p>
         <p class="reveal d1">
-          程律师专注<strong>公司法与股权纠纷、劳动争议及商事争议解决</strong>，擅长处理<strong>股东资格确认、股权代持显名、股东知情权纠纷、股东代表诉讼、公司解散与清算、法定代表人涤除登记</strong>等公司治理与股东争议案件，以及<strong>劳动合同纠纷、工伤认定与赔偿、公司内部劳务合规</strong>等用工争议。
+          <span class="zh-text">程律师专注<strong>公司法与股权纠纷、劳动争议及商事争议解决</strong>，擅长处理<strong>股东资格确认、股权代持显名、股东知情权纠纷、股东代表诉讼、公司解散与清算、法定代表人涤除登记</strong>等公司治理与股东争议案件，以及<strong>劳动合同纠纷、工伤认定与赔偿、公司内部劳务合规</strong>等用工争议。</span>
+          <span class="en-text">Ms. Cheng focuses on <strong>corporate law, equity disputes, labor disputes and commercial dispute resolution</strong>. She is experienced in shareholder status confirmation, nominee shareholding disclosure, shareholder information rights, shareholder derivative actions, company dissolution and liquidation, and removal of legal representatives, as well as labor contract disputes, work-related injury compensation and internal labor compliance.</span>
         </p>
         <p class="reveal d2">
-          程律师本科毕业于<strong>上海财经大学经济法专业</strong>，获<strong>上海财经大学法学院优秀毕业生</strong>称号；后赴美于<strong>范德堡大学法学院（Vanderbilt University Law School）</strong>取得<strong>LL.M.法学硕士</strong>学位，并获<strong>范德堡大学法学院奖学金（Merit-Based Scholarship）</strong>。凭借中美两地法律教育背景与实务经验，程律师熟悉中美两地商业与法律环境，入选<strong>上海国际法律服务枢纽涉外人才名录</strong>。
+          <span class="zh-text">程律师本科毕业于<strong>上海财经大学经济法专业</strong>，获<strong>上海财经大学法学院优秀毕业生</strong>称号；后赴美于<strong>范德堡大学法学院（Vanderbilt University Law School）</strong>取得<strong>LL.M.法学硕士</strong>学位，并获<strong>范德堡大学法学院奖学金（Merit-Based Scholarship）</strong>。凭借中美两地法律教育背景与实务经验，程律师熟悉中美两地商业与法律环境，入选<strong>上海国际法律服务枢纽涉外人才名录</strong>。</span>
+          <span class="en-text">Ms. Cheng earned her LL.B. in Economic Law from <strong>Shanghai University of Finance and Economics</strong>, where she was honored as an <strong>Outstanding Graduate of the Law School</strong>. She then received her <strong>LL.M. from Vanderbilt University Law School</strong> in the United States, awarded with a <strong>Merit-Based Scholarship</strong>. With legal education and practical experience in both China and the US, she is familiar with the business and legal environments of both markets, and has been selected for the <strong>Shanghai International Legal Services Hub Foreign-Related Talent List</strong>.</span>
         </p>
         <p class="reveal d3">
-          2023 年 12 月起从事法律工作，先后在上海明伦律师事务所实习、任实习律师、执业律师，并曾担任原执业律所<strong>北美办公室负责人</strong>；2026 年 7 月起执业于上海市君悦律师事务所。
+          <span class="zh-text">2023 年 12 月起从事法律工作，先后在上海明伦律师事务所实习、任实习律师、执业律师，并曾担任原执业律所<strong>北美办公室负责人</strong>；2026 年 7 月起执业于上海市君悦律师事务所。</span>
+          <span class="en-text">Ms. Cheng has been engaged in legal practice since December 2023. She interned and practiced at Shanghai Minglun Law Offices, where she also served as <strong>Head of the firm's North America Office</strong>, and has been practicing at MHP Law Firm since July 2026.</span>
         </p>
         <p class="reveal d4">
-          程律师创办并运营法律专业公众号「程律视界-Law&amp;Beyond」，长期输出公司法、股权纠纷与劳动法实务文章，并受邀参与公司治理、跨境投资等主题研讨会进行专业分享。
+          <span class="zh-text">程律师创办并运营法律专业公众号「程律视界-Law&amp;Beyond」，长期输出公司法、股权纠纷与劳动法实务文章，并受邀参与公司治理、跨境投资等主题研讨会进行专业分享。</span>
+          <span class="en-text">She founded and runs a legal WeChat blog "Law&amp;Beyond", regularly publishing articles on corporate law, equity disputes and labor law, and is a frequent speaker at seminars on corporate governance and cross-border investment.</span>
         </p>
         <p class="reveal d5">
-          2026 年 9 月，参加上海市律师协会与香港德辅大律师事务所合作举办的<strong>国际仲裁训练营及入所带教项目</strong>。
+          <span class="zh-text">2026 年 9 月，参加上海市律师协会与香港德辅大律师事务所合作举办的<strong>国际仲裁培训</strong>。</span>
+          <span class="en-text">In September 2026, she completed an <strong>international arbitration training program</strong> jointly held by the Shanghai Bar Association and Des Voeux Chambers (Hong Kong).</span>
         </p>
 
         <div class="honor reveal d6">
           <div class="t">Honors</div>
-          <div class="c">上海财经大学法学院优秀毕业生 ｜ 范德堡大学法学院奖学金获得者 ｜ 上海国际法律服务枢纽涉外人才名录 ｜ 君悦律师事务所证券与上市委员会委员</div>
+          <div class="c">
+            <span class="zh-text">上海财经大学法学院优秀毕业生 ｜ 范德堡大学法学院奖学金获得者 ｜ 上海国际法律服务枢纽涉外人才名录 ｜ 君悦律师事务所证券与上市委员会委员</span>
+            <span class="en-text">Outstanding Graduate, SUFE Law School ｜ Merit-Based Scholarship, Vanderbilt Law School ｜ Shanghai International Legal Services Hub Foreign-Related Talent List ｜ Member, Securities &amp; Capital Markets Committee, MHP Law Firm</span>
+          </div>
         </div>
       </div>
 
       <div class="facts reveal d2">
         <div class="fact">
-          <div class="k">执业机构</div>
+          <div class="k"><span class="zh-text">执业机构</span><span class="en-text">Firm</span></div>
           <div class="v"><a href="https://www.mhplawyer.com/" target="_blank" rel="noopener">上海市君悦律师事务所</a></div>
         </div>
         <div class="fact">
-          <div class="k">执业资格</div>
-          <div class="v">中国律师执业资格</div>
+          <div class="k"><span class="zh-text">执业资格</span><span class="en-text">License</span></div>
+          <div class="v"><span class="zh-text">中国律师执业资格</span><span class="en-text">PRC Lawyer's License</span></div>
         </div>
         <div class="fact">
-          <div class="k">所内职务</div>
-          <div class="v">证券与上市委员会委员</div>
+          <div class="k"><span class="zh-text">所内职务</span><span class="en-text">Committee</span></div>
+          <div class="v"><span class="zh-text">证券与上市委员会委员</span><span class="en-text">Securities &amp; Capital Markets Committee</span></div>
         </div>
         <div class="fact">
-          <div class="k">工作语言</div>
-          <div class="v">中文 / 英文</div>
+          <div class="k"><span class="zh-text">工作语言</span><span class="en-text">Languages</span></div>
+          <div class="v"><span class="zh-text">中文 / 英文</span><span class="en-text">Chinese / English</span></div>
         </div>
         <div class="fact">
-          <div class="k">教育背景</div>
-          <div class="v">上海财经大学 · 经济法（法学学士）<br>美国范德堡大学法学院 · LL.M.法学硕士</div>
+          <div class="k"><span class="zh-text">教育背景</span><span class="en-text">Education</span></div>
+          <div class="v"><span class="zh-text">上海财经大学 · 经济法（法学学士）<br>美国范德堡大学法学院 · LL.M.法学硕士</span><span class="en-text">SUFE · LL.B. in Economic Law<br>Vanderbilt Law School · LL.M.</span></div>
         </div>
         <div class="fact">
-          <div class="k">办公地址</div>
-          <div class="v">上海市静安区南京西路1717号<br>会德丰国际广场7楼</div>
+          <div class="k"><span class="zh-text">办公地址</span><span class="en-text">Office</span></div>
+          <div class="v"><span class="zh-text">上海市静安区南京西路1717号<br>会德丰国际广场7楼</span><span class="en-text">7F, Wheelock Square, 1717 Nanjing West Rd, Jing'an, Shanghai</span></div>
         </div>
         <div class="fact">
-          <div class="k">Email</div>
+          <div class="k"><span class="zh-text">电子邮箱</span><span class="en-text">Email</span></div>
           <div class="v"><a href="mailto:yijing.cheng@mhplawyer.com">yijing.cheng@mhplawyer.com</a></div>
         </div>
       </div>
@@ -634,48 +667,48 @@ footer .fbrand{color:rgba(255,255,255,.72);font-size:14.5px;margin-bottom:8px;
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="num">02 / EXPERTISE</div>
-      <h2>专业领域</h2>
+      <h2><span class="zh-text">专业领域</span><span class="en-text">Areas of Expertise</span></h2>
       <div class="gold-line"></div>
-      <p class="desc">以公司法与股东纠纷为核心，覆盖商事诉讼、仲裁与非诉全流程，并处理劳动合同、工伤及企业内部劳务合规等用工纠纷，同时延伸至跨境投融资、外商投资与国际仲裁等涉外领域。</p>
+      <p class="desc"><span class="zh-text">以公司法与股东纠纷为核心，覆盖商事诉讼、仲裁与非诉全流程，并处理劳动合同、工伤及企业内部劳务合规等用工纠纷，同时延伸至跨境投融资、外商投资与国际仲裁等涉外领域。</span><span class="en-text">Centered on corporate law and shareholder disputes, covering commercial litigation, arbitration and non-contentious work, including labor contract, work-related injury and internal labor compliance matters, extending to cross-border investment, foreign direct investment and international arbitration.</span></p>
     </div>
 
     <div class="exp-block reveal">
-      <h3>诉讼与仲裁</h3>
+      <h3><span class="zh-text">诉讼与仲裁</span><span class="en-text">Litigation &amp; Arbitration</span></h3>
       <div class="chips">
-        <div class="chip">股东资格确认</div>
-        <div class="chip">股权代持显名</div>
-        <div class="chip">股东知情权纠纷</div>
-        <div class="chip">股东代表诉讼</div>
-        <div class="chip">公司解散与清算</div>
-        <div class="chip">法定代表人涤除登记</div>
-        <div class="chip">公司治理与股东争议</div>
-        <div class="chip">合同纠纷与侵权责任</div>
+        <div class="chip"><span class="zh-text">股东资格确认</span><span class="en-text">Shareholder Status Confirmation</span></div>
+        <div class="chip"><span class="zh-text">股权代持显名</span><span class="en-text">Nominee Shareholding Disclosure</span></div>
+        <div class="chip"><span class="zh-text">股东知情权纠纷</span><span class="en-text">Shareholder Information Rights</span></div>
+        <div class="chip"><span class="zh-text">股东代表诉讼</span><span class="en-text">Shareholder Derivative Actions</span></div>
+        <div class="chip"><span class="zh-text">公司解散与清算</span><span class="en-text">Company Dissolution &amp; Liquidation</span></div>
+        <div class="chip"><span class="zh-text">法定代表人涤除登记</span><span class="en-text">Removal of Legal Representative</span></div>
+        <div class="chip"><span class="zh-text">公司治理与股东争议</span><span class="en-text">Corporate Governance Disputes</span></div>
+        <div class="chip"><span class="zh-text">合同纠纷与侵权责任</span><span class="en-text">Contract &amp; Tort Disputes</span></div>
       </div>
     </div>
 
     <div class="exp-block reveal d1">
-      <h3>劳动与用工</h3>
+      <h3><span class="zh-text">劳动与用工</span><span class="en-text">Labor &amp; Employment</span></h3>
       <div class="chips">
-        <div class="chip">劳动合同纠纷</div>
-        <div class="chip">工伤认定与赔偿</div>
-        <div class="chip">公司内部劳务合规</div>
-        <div class="chip">竞业限制与保密</div>
-        <div class="chip">员工手册与规章制度合规</div>
-        <div class="chip">经济补偿与赔偿金争议</div>
-        <div class="chip">劳务派遣与外包</div>
+        <div class="chip"><span class="zh-text">劳动合同纠纷</span><span class="en-text">Labor Contract Disputes</span></div>
+        <div class="chip"><span class="zh-text">工伤认定与赔偿</span><span class="en-text">Work-Related Injury Compensation</span></div>
+        <div class="chip"><span class="zh-text">公司内部劳务合规</span><span class="en-text">Internal Labor Compliance</span></div>
+        <div class="chip"><span class="zh-text">竞业限制与保密</span><span class="en-text">Non-Compete &amp; Confidentiality</span></div>
+        <div class="chip"><span class="zh-text">员工手册与规章制度合规</span><span class="en-text">Employee Handbook Compliance</span></div>
+        <div class="chip"><span class="zh-text">经济补偿与赔偿金争议</span><span class="en-text">Severance &amp; Damages Disputes</span></div>
+        <div class="chip"><span class="zh-text">劳务派遣与外包</span><span class="en-text">Labor Dispatch &amp; Outsourcing</span></div>
       </div>
     </div>
 
     <div class="exp-block reveal d2">
-      <h3>非诉与涉外</h3>
+      <h3><span class="zh-text">非诉与涉外</span><span class="en-text">Non-Contentious &amp; Cross-Border</span></h3>
       <div class="chips">
-        <div class="chip">私募股权与风险投资（PE/VC）</div>
-        <div class="chip">企业投融资</div>
-        <div class="chip">企业破产清算</div>
-        <div class="chip">外商投资</div>
-        <div class="chip">跨境投融资</div>
-        <div class="chip">涉外事务</div>
-        <div class="chip">国际仲裁</div>
+        <div class="chip"><span class="zh-text">私募股权与风险投资（PE/VC）</span><span class="en-text">Private Equity &amp; Venture Capital</span></div>
+        <div class="chip"><span class="zh-text">企业投融资</span><span class="en-text">Corporate Investment &amp; Financing</span></div>
+        <div class="chip"><span class="zh-text">企业破产清算</span><span class="en-text">Corporate Bankruptcy &amp; Liquidation</span></div>
+        <div class="chip"><span class="zh-text">外商投资</span><span class="en-text">Foreign Direct Investment</span></div>
+        <div class="chip"><span class="zh-text">跨境投融资</span><span class="en-text">Cross-Border Investment</span></div>
+        <div class="chip"><span class="zh-text">涉外事务</span><span class="en-text">Foreign-Related Matters</span></div>
+        <div class="chip"><span class="zh-text">国际仲裁</span><span class="en-text">International Arbitration</span></div>
       </div>
     </div>
   </div>
@@ -686,37 +719,37 @@ footer .fbrand{color:rgba(255,255,255,.72);font-size:14.5px;margin-bottom:8px;
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="num">03 / EDUCATION</div>
-      <h2>教育背景</h2>
+      <h2><span class="zh-text">教育背景</span><span class="en-text">Education</span></h2>
       <div class="gold-line"></div>
-      <p class="desc">法学与商科交叉背景，兼具中国大陆与美国法律教育经历。</p>
+      <p class="desc"><span class="zh-text">法学与商科交叉背景，兼具中国大陆与美国法律教育经历。</span><span class="en-text">An interdisciplinary background in law and business, with legal education in both China and the United States.</span></p>
     </div>
 
     <div class="edu-grid">
       <div class="edu-card sufe reveal">
-        <div class="edu-badge">本科 · 法学学士</div>
+        <div class="edu-badge"><span class="zh-text">本科 · 法学学士</span><span class="en-text">LL.B. Bachelor of Laws</span></div>
         <h3>上海财经大学</h3>
         <div class="en">Shanghai University of Finance and Economics</div>
-        <div class="degree">经济法专业 · 优秀毕业生</div>
-        <div class="motto">校训「厚德博学，经济匡时」——以经济学底蕴涵养法律专业，理解商业交易与争议解决的经济逻辑。</div>
+        <div class="degree"><span class="zh-text">经济法专业 · 优秀毕业生</span><span class="en-text">Economic Law · Outstanding Graduate</span></div>
+        <div class="motto"><span class="zh-text">校训「厚德博学，经济匡时」——以经济学底蕴涵养法律专业，理解商业交易与争议解决的经济逻辑。</span><span class="en-text">Motto: "Virtue, Knowledge, Economic Wisdom." A finance-rooted legal education with deep insight into the economics of business transactions and disputes.</span></div>
         <div class="edu-tags">
-          <span class="edu-tag"><b>211工程</b> 重点建设高校</span>
-          <span class="edu-tag"><b>双一流</b> 建设高校</span>
-          <span class="edu-tag"><b>985工程</b> 优势学科创新平台</span>
-          <span class="edu-tag">法学院优秀毕业生</span>
+          <span class="edu-tag"><b>211工程</b> <span class="zh-text">重点建设高校</span><span class="en-text">Project 211 University</span></span>
+          <span class="edu-tag"><b>双一流</b> <span class="zh-text">建设高校</span><span class="en-text">Double First-Class University</span></span>
+          <span class="edu-tag"><b>985工程</b> <span class="zh-text">优势学科创新平台</span><span class="en-text">Project 985 Platform</span></span>
+          <span class="edu-tag"><span class="zh-text">法学院优秀毕业生</span><span class="en-text">Outstanding Graduate</span></span>
         </div>
       </div>
 
       <div class="edu-card vandy reveal d1">
-        <div class="edu-badge">硕士 · LL.M.法学硕士</div>
+        <div class="edu-badge"><span class="zh-text">硕士 · LL.M.法学硕士</span><span class="en-text">LL.M. Master of Laws</span></div>
         <h3>范德堡大学</h3>
         <div class="en">Vanderbilt University</div>
-        <div class="degree">法学院 LL.M. · 奖学金获得者（Merit-Based Scholarship）· 2022–2023</div>
-        <div class="motto">位于美国田纳西州纳什维尔，1873 年创立，US News 2025 全美大学排名第 18 位。校训「Crescere aude」——敢于成长。</div>
+        <div class="degree"><span class="zh-text">法学院 LL.M. · 奖学金获得者（Merit-Based Scholarship）· 2022–2023</span><span class="en-text">Law School LL.M. · Merit-Based Scholarship · 2022–2023</span></div>
+        <div class="motto"><span class="zh-text">位于美国田纳西州纳什维尔，1873 年创立，US News 2025 全美大学排名第 18 位。校训「Crescere aude」——敢于成长。</span><span class="en-text">Located in Nashville, Tennessee. Founded in 1873. Ranked No. 18 among U.S. national universities (US News 2025). Motto: "Crescere aude" — dare to grow.</span></div>
         <div class="edu-tags">
-          <span class="edu-tag"><b>US News</b> 全美第 18</span>
-          <span class="edu-tag">美国私立研究型大学</span>
-          <span class="edu-tag">1873 年创立</span>
-          <span class="edu-tag">法学院奖学金获得者</span>
+          <span class="edu-tag"><b>US News</b> <span class="zh-text">全美第 18</span><span class="en-text">Top 18 in the U.S.</span></span>
+          <span class="edu-tag"><span class="zh-text">美国私立研究型大学</span><span class="en-text">Private Research University</span></span>
+          <span class="edu-tag"><span class="zh-text">1873 年创立</span><span class="en-text">Founded in 1873</span></span>
+          <span class="edu-tag"><span class="zh-text">法学院奖学金获得者</span><span class="en-text">Merit Scholarship Recipient</span></span>
         </div>
       </div>
     </div>
@@ -728,61 +761,61 @@ footer .fbrand{color:rgba(255,255,255,.72);font-size:14.5px;margin-bottom:8px;
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="num">04 / EXPERIENCE</div>
-      <h2>代表业绩</h2>
+      <h2><span class="zh-text">代表业绩</span><span class="en-text">Representative Matters</span></h2>
       <div class="gold-line"></div>
-      <p class="desc">聚焦公司治理、投融资、破产清算、涉外交易及民商事争议的典型案件，以下案例均已作脱敏处理，不包含当事人可识别信息。</p>
+      <p class="desc"><span class="zh-text">聚焦公司治理、投融资、破产清算、涉外交易及民商事争议的典型案件，以下案例均已作脱敏处理，不包含当事人可识别信息。</span><span class="en-text">Selected matters in corporate governance, investment and financing, bankruptcy, cross-border transactions and civil/commercial disputes. All cases are anonymized with no identifiable client information.</span></p>
     </div>
 
     <div class="cases-grid">
       <div class="case-card reveal">
-        <div class="case-cat">公司治理 · 诉讼</div>
-        <h4>代理离职高管诉请涤除法定代表人登记</h4>
-        <p>委托人辞任后仍被登记为法定代表人，因公司僵局无法通过内部程序办理变更，持续面临限高、被执行等法律风险。围绕"委托关系终止后公司负有办理变更登记义务"这一核心争点，依据《公司法》相关规定论证委托法律关系已告解除的法律后果，并梳理公司怠于履行义务的证据链条，最终获得法院支持，涤除其法定代表人登记。</p>
+        <div class="case-cat"><span class="zh-text">公司治理 · 诉讼</span><span class="en-text">Corporate Governance · Litigation</span></div>
+        <h4><span class="zh-text">代理离职高管诉请涤除法定代表人登记</span><span class="en-text">Removing a Departed Executive from Legal Representative Registration</span></h4>
+        <p><span class="zh-text">委托人辞任后仍被登记为法定代表人，因公司僵局无法通过内部程序办理变更，持续面临限高、被执行等法律风险。围绕"委托关系终止后公司负有办理变更登记义务"这一核心争点，依据《公司法》相关规定论证委托法律关系已告解除的法律后果，并梳理公司怠于履行义务的证据链条，最终获得法院支持，涤除其法定代表人登记。</span><span class="en-text">After resignation, the client remained registered as the company's legal representative and faced mounting enforcement risks. Arguing that the company is obligated to update the registration once the mandate has ended under the PRC Company Law, we built the evidence chain of the company's failure to act and secured a court ruling removing the client from the registration.</span></p>
       </div>
       <div class="case-card reveal d1">
-        <div class="case-cat">公司治理 · 诉讼</div>
-        <h4>代理小股东诉请解散公司</h4>
-        <p>公司长期陷入经营僵局，股东会无法形成有效决议，小股东投资目的落空。以"公司经营管理发生严重困难、继续存续将损害股东利益"为请求权基础，系统收集股东会长期无法召开、决策机制失灵、经营停滞等方面的证据，完成对公司僵局的要件化论证，推进公司解散之诉。</p>
+        <div class="case-cat"><span class="zh-text">公司治理 · 诉讼</span><span class="en-text">Corporate Governance · Litigation</span></div>
+        <h4><span class="zh-text">代理小股东诉请解散公司</span><span class="en-text">Dissolution Action Brought by a Minority Shareholder</span></h4>
+        <p><span class="zh-text">公司长期陷入经营僵局，股东会无法形成有效决议，小股东投资目的落空。以"公司经营管理发生严重困难、继续存续将损害股东利益"为请求权基础，系统收集股东会长期无法召开、决策机制失灵、经营停滞等方面的证据，完成对公司僵局的要件化论证，推进公司解散之诉。</span><span class="en-text">With shareholder meetings unable to function and the company deadlocked, we built an element-by-element case for judicial dissolution on the ground that the company's operations were in serious difficulty and its continuance would harm shareholders' interests, systematically collecting evidence of failed meetings and stalled operations.</span></p>
       </div>
       <div class="case-card reveal d2">
-        <div class="case-cat">公司治理 · 诉讼</div>
-        <h4>代理隐名股东诉请查阅公司会计账簿及凭证</h4>
-        <p>委托人作为隐名股东，就知情权行使范围与公司产生争议。围绕"股东知情权是否涵盖会计凭证"这一实践中的争议焦点，论证会计账簿与会计凭证的内在关联，主张查阅范围应扩展至原始凭证以保障知情权的实质实现，相关主张获得法院支持。</p>
+        <div class="case-cat"><span class="zh-text">公司治理 · 诉讼</span><span class="en-text">Corporate Governance · Litigation</span></div>
+        <h4><span class="zh-text">代理隐名股东诉请查阅公司会计账簿及凭证</span><span class="en-text">Shareholder Information Rights: Access to Accounting Vouchers</span></h4>
+        <p><span class="zh-text">委托人作为隐名股东，就知情权行使范围与公司产生争议。围绕"股东知情权是否涵盖会计凭证"这一实践中的争议焦点，论证会计账簿与会计凭证的内在关联，主张查阅范围应扩展至原始凭证以保障知情权的实质实现，相关主张获得法院支持。</span><span class="en-text">Acting for a concealed shareholder, we argued that the right to inspect accounting books should extend to underlying accounting vouchers to give the information right real substance — a position accepted by the court.</span></p>
       </div>
       <div class="case-card reveal">
-        <div class="case-cat">投融资 · 非诉</div>
-        <h4>某科技公司多轮融资项目</h4>
-        <p>针对企业历经多轮融资、投资条款层层叠加的复杂情况，系统梳理各轮次投资协议中的优先认购权、反稀释、回购、优先清算等核心条款，识别不同轮次条款之间的冲突与衔接问题；在此基础上协调投资方与创始团队利益诉求，提出条款优化与衔接方案，并修订公司章程相关条款，保障融资进程平稳推进。</p>
+        <div class="case-cat"><span class="zh-text">投融资 · 非诉</span><span class="en-text">Investment &amp; Financing · Non-Contentious</span></div>
+        <h4><span class="zh-text">某科技公司多轮融资项目</span><span class="en-text">Multiple Financing Rounds for a Technology Company</span></h4>
+        <p><span class="zh-text">针对企业历经多轮融资、投资条款层层叠加的复杂情况，系统梳理各轮次投资协议中的优先认购权、反稀释、回购、优先清算等核心条款，识别不同轮次条款之间的冲突与衔接问题；在此基础上协调投资方与创始团队利益诉求，提出条款优化与衔接方案，并修订公司章程相关条款，保障融资进程平稳推进。</span><span class="en-text">For a company after multiple financing rounds, we mapped core terms across instruments — preemptive rights, anti-dilution, redemption and liquidation preferences — identified conflicts between rounds, reconciled investor and founder interests, and amended the articles of association to keep the financing on track.</span></p>
       </div>
       <div class="case-card reveal d1">
-        <div class="case-cat">破产清算 · 非诉</div>
-        <h4>某制造企业破产清算案</h4>
-        <p>企业陷入债务危机、面临清算，需在保护债权人利益与资产处置之间寻求平衡。全面分析企业债务结构与资产负债状况，协助制定清算方案，并主导设计股权置换方案以化解债务、盘活资产；同步起草股权置换协议及配套法律文件，把控交易结构与法律风险。</p>
+        <div class="case-cat"><span class="zh-text">破产清算 · 非诉</span><span class="en-text">Bankruptcy · Non-Contentious</span></div>
+        <h4><span class="zh-text">某制造企业破产清算案</span><span class="en-text">Bankruptcy Liquidation of a Manufacturing Enterprise</span></h4>
+        <p><span class="zh-text">企业陷入债务危机、面临清算，需在保护债权人利益与资产处置之间寻求平衡。全面分析企业债务结构与资产负债状况，协助制定清算方案，并主导设计股权置换方案以化解债务、盘活资产；同步起草股权置换协议及配套法律文件，把控交易结构与法律风险。</span><span class="en-text">Facing a debt crisis, we analyzed the enterprise's debt structure, assisted in formulating the liquidation plan, and designed a share-swap scheme to resolve debts and revitalize assets, drafting the swap agreement and related documents while controlling transaction risks.</span></p>
       </div>
       <div class="case-card reveal d2">
-        <div class="case-cat">涉外 · 并购</div>
-        <h4>某中意投资并购项目</h4>
-        <p>跨境交易中中英文文本表述差异往往埋藏权利义务分歧。参与股权转让全程，审核中英文双语投资协议，重点协调优先购买权、知识产权归属、陈述与保证等条款在中英文语境下的表述差异，消除语义歧义，确保交易文件的准确性与可执行性。</p>
+        <div class="case-cat"><span class="zh-text">涉外 · 并购</span><span class="en-text">Cross-Border · M&amp;A</span></div>
+        <h4><span class="zh-text">某中意投资并购项目</span><span class="en-text">China-Italy Investment and Acquisition Project</span></h4>
+        <p><span class="zh-text">跨境交易中中英文文本表述差异往往埋藏权利义务分歧。参与股权转让全程，审核中英文双语投资协议，重点协调优先购买权、知识产权归属、陈述与保证等条款在中英文语境下的表述差异，消除语义歧义，确保交易文件的准确性与可执行性。</span><span class="en-text">Participating throughout the equity transfer, we reviewed the bilingual (Chinese-English) investment agreements and reconciled discrepancies in rights of first refusal, IP ownership and representations &amp; warranties between the two language versions, eliminating ambiguity to keep the documents accurate and enforceable.</span></p>
       </div>
       <div class="case-card reveal">
-        <div class="case-cat">涉外 · 争议解决</div>
-        <h4>某中东贸易合同纠纷</h4>
-        <p>主导处理国际贸易合同项下争议，围绕合同履行中的违约事实与责任认定展开工作，逐条梳理合同条款以明确双方权利义务边界，重点厘清违约责任承担方式及争议解决条款的适用，为客户厘清权利主张路径与应对策略。</p>
+        <div class="case-cat"><span class="zh-text">涉外 · 争议解决</span><span class="en-text">Cross-Border · Dispute Resolution</span></div>
+        <h4><span class="zh-text">某中东贸易合同纠纷</span><span class="en-text">Trade Contract Dispute with a Middle East Counterparty</span></h4>
+        <p><span class="zh-text">主导处理国际贸易合同项下争议，围绕合同履行中的违约事实与责任认定展开工作，逐条梳理合同条款以明确双方权利义务边界，重点厘清违约责任承担方式及争议解决条款的适用，为客户厘清权利主张路径与应对策略。</span><span class="en-text">Leading the handling of an international trade contract dispute, we analyzed breach facts and liability clause by clause, clarified the parties' rights and obligations, and defined the liability allocation and dispute resolution path for the client.</span></p>
       </div>
       <div class="case-card reveal d1">
-        <div class="case-cat">涉外 · 公司设立</div>
-        <h4>北美某前沿科技公司设立</h4>
-        <p>负责该前沿科技公司在北美的设立相关法律事务，统筹公司治理结构搭建、公司章程与设立文件的起草审查，并就跨境架构下的主体类型选择、合规要点提供法律支持，协助完成设立阶段的各项法律工作。</p>
+        <div class="case-cat"><span class="zh-text">涉外 · 公司设立</span><span class="en-text">Cross-Border · Company Formation</span></div>
+        <h4><span class="zh-text">北美某前沿科技公司设立</span><span class="en-text">Formation of a Frontier Technology Company in North America</span></h4>
+        <p><span class="zh-text">负责该前沿科技公司在北美的设立相关法律事务，统筹公司治理结构搭建、公司章程与设立文件的起草审查，并就跨境架构下的主体类型选择、合规要点提供法律支持，协助完成设立阶段的各项法律工作。</span><span class="en-text">We handled the legal aspects of establishing the company in North America, structuring its governance framework, drafting and reviewing the charter and formation documents, and advising on entity selection and compliance under a cross-border structure.</span></p>
       </div>
       <div class="case-card reveal d2">
-        <div class="case-cat">合同纠纷 · 诉讼</div>
-        <h4>代理债权人主张选择履行原债务</h4>
-        <p>债务人未履行以物抵债协议，就"新旧债务并存时债权人可否择一主张"这一争议焦点，援引《民法典合同编通则司法解释》相关规定，论证新债与旧债并存的清偿关系及债权人的选择履行请求权基础，为委托人厘清权利实现路径。</p>
+        <div class="case-cat"><span class="zh-text">合同纠纷 · 诉讼</span><span class="en-text">Contract Dispute · Litigation</span></div>
+        <h4><span class="zh-text">代理债权人主张选择履行原债务</span><span class="en-text">Creditor's Right to Elect Performance of the Original Obligation</span></h4>
+        <p><span class="zh-text">债务人未履行以物抵债协议，就"新旧债务并存时债权人可否择一主张"这一争议焦点，援引《民法典合同编通则司法解释》相关规定，论证新债与旧债并存的清偿关系及债权人的选择履行请求权基础，为委托人厘清权利实现路径。</span><span class="en-text">Where the debtor failed to perform an agreement substituting payment in kind, we invoked the Judicial Interpretation on the Contract Part of the Civil Code to establish that old and new obligations coexist and the creditor may elect to claim performance of the original obligation.</span></p>
       </div>
       <div class="case-card reveal">
-        <div class="case-cat">担保纠纷 · 诉讼</div>
-        <h4>代理保证人主张限定担保范围</h4>
-        <p>债权人主张的保证责任范围超出约定，围绕担保合同条款的解释与保证责任范围认定展开工作，逐项分析担保合同关于保证范围、保证期间及责任限额的约定，明确保证人仅就约定范围承担责任的边界，成功减免超出部分的赔偿责任。</p>
+        <div class="case-cat"><span class="zh-text">担保纠纷 · 诉讼</span><span class="en-text">Guarantee Dispute · Litigation</span></div>
+        <h4><span class="zh-text">代理保证人主张限定担保范围</span><span class="en-text">Limiting the Scope of a Guarantor's Liability</span></h4>
+        <p><span class="zh-text">债权人主张的保证责任范围超出约定，围绕担保合同条款的解释与保证责任范围认定展开工作，逐项分析担保合同关于保证范围、保证期间及责任限额的约定，明确保证人仅就约定范围承担责任的边界，成功减免超出部分的赔偿责任。</span><span class="en-text">Against claims exceeding the agreed scope, we analyzed the guarantee contract's provisions on scope, period and liability caps, established the boundaries of the guarantor's obligations, and successfully reduced the liability beyond the agreed terms.</span></p>
       </div>
     </div>
   </div>
@@ -815,47 +848,52 @@ footer .fbrand{color:rgba(255,255,255,.72);font-size:14.5px;margin-bottom:8px;
     <div class="global-inner">
       <div class="sec-head reveal">
         <div class="num">05 / CROSS-BORDER</div>
-        <h2>涉外业务</h2>
+        <h2><span class="zh-text">涉外业务</span><span class="en-text">Cross-Border Practice</span></h2>
         <div class="gold-line"></div>
-        <p class="desc">立足上海，连接中美两地商业与法律环境。</p>
+        <p class="desc"><span class="zh-text">立足上海，连接中美两地商业与法律环境。</span><span class="en-text">Based in Shanghai, connecting the business and legal environments of China and the United States.</span></p>
       </div>
 
       <div class="global-grid">
         <div class="global-text reveal">
-          <div class="global-lead">中美涉外律师，<em>中英文均可工作</em></div>
+          <div class="global-lead">
+            <span class="zh-text">中美涉外律师，<em>中英文均可工作</em></span>
+            <span class="en-text">China-US Cross-Border Lawyer, <em>working in Chinese &amp; English</em></span>
+          </div>
           <p>
-            凭借美国范德堡大学法律教育背景与<strong>中美两地法律实务经验</strong>，程律师熟悉中美两地商业与法律环境，能够在中英文语境下为客户提供跨法域的法律支持。
+            <span class="zh-text">凭借美国范德堡大学法律教育背景与<strong>中美两地法律实务经验</strong>，程律师熟悉中美两地商业与法律环境，能够在中英文语境下为客户提供跨法域的法律支持。</span>
+            <span class="en-text">With her U.S. legal education at Vanderbilt and <strong>practical experience in both China and the US</strong>, Ms. Cheng understands the business and legal environments of both markets and provides cross-jurisdictional support in Chinese and English.</span>
           </p>
           <p>
-            曾担任原执业律所<strong>北美办公室负责人</strong>，参与跨境投融资、外商投资、国际仲裁及涉外争议解决，并入选<strong>上海国际法律服务枢纽涉外人才名录</strong>。
+            <span class="zh-text">曾担任原执业律所<strong>北美办公室负责人</strong>，参与跨境投融资、外商投资、国际仲裁及涉外争议解决，并入选<strong>上海国际法律服务枢纽涉外人才名录</strong>。</span>
+            <span class="en-text">She previously served as <strong>Head of her former firm's North America Office</strong>, and works on cross-border investment, foreign direct investment, international arbitration and foreign-related dispute resolution. She has been selected for the <strong>Shanghai International Legal Services Hub Foreign-Related Talent List</strong>.</span>
           </p>
           <div class="global-pills">
-            <span>跨境投融资</span>
-            <span>外商投资</span>
-            <span>国际仲裁</span>
-            <span>涉外争议解决</span>
-            <span>中英文工作</span>
+            <span><span class="zh-text">跨境投融资</span><span class="en-text">Cross-Border Investment</span></span>
+            <span><span class="zh-text">外商投资</span><span class="en-text">Foreign Direct Investment</span></span>
+            <span><span class="zh-text">国际仲裁</span><span class="en-text">International Arbitration</span></span>
+            <span><span class="zh-text">涉外争议解决</span><span class="en-text">Foreign-Related Disputes</span></span>
+            <span><span class="zh-text">中英文工作</span><span class="en-text">Bilingual Practice</span></span>
           </div>
         </div>
 
         <div class="global-cities reveal d2">
+          <div class="city city-sh">
+            <div class="mark"></div>
+            <div class="cname"><span class="zh-text">上海</span><span class="en-text">Shanghai</span></div>
+            <div class="cen">Shanghai · 31.23° N, 121.47° E</div>
+            <div class="cdesc"><span class="zh-text">执业所在地，连接中国大陆与国际市场的法律与商业桥梁。</span><span class="en-text">Home base of practice — the bridge connecting mainland China with international markets.</span></div>
+          </div>
           <div class="city city-sf">
             <div class="mark"></div>
-            <div class="cname">旧金山湾区</div>
+            <div class="cname"><span class="zh-text">旧金山湾区</span><span class="en-text">San Francisco Bay Area</span></div>
             <div class="cen">San Francisco Bay Area · 37.77° N, 122.42° W</div>
-            <div class="cdesc">全球科技创新与风险投资中心，跨境投融资与前沿科技企业法律服务的高频场景。</div>
+            <div class="cdesc"><span class="zh-text">全球科技创新与风险投资中心，跨境投融资与前沿科技企业法律服务的高频场景。</span><span class="en-text">A global hub of technology and venture capital — a frequent arena for cross-border investment and frontier-tech legal services.</span></div>
           </div>
           <div class="city city-ny">
             <div class="mark"></div>
-            <div class="cname">纽约</div>
+            <div class="cname"><span class="zh-text">纽约</span><span class="en-text">New York</span></div>
             <div class="cen">New York · 40.71° N, 74.01° W</div>
-            <div class="cdesc">国际金融与商事交易核心枢纽，跨境并购、外商投资与国际仲裁的活跃市场。</div>
-          </div>
-          <div class="city">
-            <div class="mark"></div>
-            <div class="cname">上海</div>
-            <div class="cen">Shanghai · 31.23° N, 121.47° E</div>
-            <div class="cdesc">执业所在地，连接中国大陆与国际市场的法律与商业桥梁。</div>
+            <div class="cdesc"><span class="zh-text">国际金融与商事交易核心枢纽，跨境并购、外商投资与国际仲裁的活跃市场。</span><span class="en-text">A core hub of international finance and commerce — an active market for cross-border M&amp;A, FDI and international arbitration.</span></div>
           </div>
         </div>
       </div>
@@ -868,37 +906,35 @@ footer .fbrand{color:rgba(255,255,255,.72);font-size:14.5px;margin-bottom:8px;
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="num">06 / TRAINING</div>
-      <h2>专业培训</h2>
+      <h2><span class="zh-text">专业培训</span><span class="en-text">Professional Training</span></h2>
       <div class="gold-line"></div>
     </div>
 
     <div class="training-grid">
       <div class="training-text reveal">
-        <h3>国际仲裁训练营及入所带教项目</h3>
+        <h3><span class="zh-text">国际仲裁培训</span><span class="en-text">International Arbitration Training</span></h3>
         <p>
-          2026 年 9 月，参加由<strong>上海市律师协会</strong>与<strong>香港德辅大律师事务所（Des Voeux Chambers）</strong>合作举办的国际仲裁训练营及入所带教项目。
+          <span class="zh-text">2026 年 9 月，参加由<strong>上海市律师协会</strong>与<strong>香港德辅大律师事务所（Des Voeux Chambers）</strong>合作举办的国际仲裁培训。</span>
+          <span class="en-text">In September 2026, Ms. Cheng completed an international arbitration training program jointly organized by the <strong>Shanghai Bar Association</strong> and <strong>Des Voeux Chambers (Hong Kong)</strong>.</span>
         </p>
         <p>
-          课程涵盖国际仲裁证据收集与准备、交叉盘问与讼辩技巧、仲裁程序规则、临时措施制度、商事与投资仲裁实务等模块，并进入德辅大律师事务所跟随资深大律师开展沉浸式带教，翻阅案件卷宗、旁听庭审聆讯。
+          <span class="zh-text">课程涵盖国际仲裁证据收集与准备、交叉盘问与讼辩技巧、仲裁程序规则、临时措施制度、商事与投资仲裁实务等模块，并进入德辅大律师事务所跟随资深大律师开展沉浸式带教，翻阅案件卷宗、旁听庭审聆讯。</span>
+          <span class="en-text">The program covered evidence collection and preparation, cross-examination and advocacy, arbitral procedure, interim measures, and commercial and investment arbitration practice, and included immersion at Des Voeux Chambers with senior counsel — reviewing case files and observing hearings.</span>
         </p>
         <div class="training-meta">
           <div>
-            <div class="k">Time</div>
-            <div class="v">2026.09 · 8 天</div>
+            <div class="k"><span class="zh-text">地点</span><span class="en-text">Place</span></div>
+            <div class="v"><span class="zh-text">中国香港</span><span class="en-text">Hong Kong, China</span></div>
           </div>
           <div>
-            <div class="k">Place</div>
-            <div class="v">中国香港</div>
-          </div>
-          <div>
-            <div class="k">Host</div>
-            <div class="v">上海律协 × 德辅大律师事务所</div>
+            <div class="k"><span class="zh-text">主办方</span><span class="en-text">Host</span></div>
+            <div class="v"><span class="zh-text">上海律协 × 德辅大律师事务所</span><span class="en-text">Shanghai Bar Association × Des Voeux Chambers</span></div>
           </div>
         </div>
       </div>
 
       <div class="training-photo reveal d2">
-        <img src="images/training-cert.jpg" alt="程轶婧律师参加上海市律师协会与香港德辅大律师事务所国际仲裁训练营及入所带教项目结业留影">
+        <img src="images/training-cert.jpg" alt="程轶婧律师参加上海市律师协会与香港德辅大律师事务所国际仲裁培训结业留影">
       </div>
     </div>
   </div>
@@ -909,50 +945,81 @@ footer .fbrand{color:rgba(255,255,255,.72);font-size:14.5px;margin-bottom:8px;
   <div class="wrap-narrow">
     <div class="sec-head reveal">
       <div class="num">07 / INSIGHTS</div>
-      <h2>实务文章</h2>
+      <h2><span class="zh-text">实务文章</span><span class="en-text">Insights &amp; Publications</span></h2>
       <div class="gold-line"></div>
+      <p class="desc"><span class="zh-text">以下文章发表于微信公众号「程律视界-Law&amp;Beyond」，点击标题可跳转阅读。</span><span class="en-text">Published on the WeChat blog "Law&amp;Beyond". Click a title to read the article (in Chinese).</span></p>
     </div>
 
     <ul class="art-list">
       <li class="reveal">
-        <a href="#">
-          <span class="ttl">小股东的大武器：股东代表诉讼全攻略（一）</span>
-          <span class="dt">2025-08-29</span>
+        <a href="https://mp.weixin.qq.com/s/OD5zWDmquczKIa-GBdv3FA" target="_blank" rel="noopener">
+          <span class="ttl">小股东的大武器（七）：不同阶段的股东代表诉讼（二）</span>
+          <span class="dt">2026-07-29</span>
         </a>
       </li>
       <li class="reveal">
-        <a href="#">
-          <span class="ttl">股东注意！0元转让股权 ≠ 0税负</span>
-          <span class="dt">2025-08-10</span>
+        <a href="https://mp.weixin.qq.com/s/kh1gAID4DLCjCf3mq9dKMw" target="_blank" rel="noopener">
+          <span class="ttl">小股东的大武器（六）：不同阶段的股东代表诉讼（一）</span>
+          <span class="dt">2026-07-27</span>
         </a>
       </li>
       <li class="reveal">
-        <a href="#">
-          <span class="ttl">隐名股东如何"显名"？股东资格确认纠纷的实务难点</span>
-          <span class="dt">2025-12-08</span>
+        <a href="https://mp.weixin.qq.com/s/P9FqY2JPocjo_I25ruRH8A" target="_blank" rel="noopener">
+          <span class="ttl">小股东的大武器（五）：与公司直接诉讼的冲突与处理</span>
+          <span class="dt">2026-05-27</span>
         </a>
       </li>
       <li class="reveal">
-        <a href="#">
-          <span class="ttl">小股东的大武器（四）：股东代表诉讼的前置程序</span>
-          <span class="dt">2025-12-12</span>
-        </a>
-      </li>
-      <li class="reveal">
-        <a href="#">
+        <a href="https://mp.weixin.qq.com/s/XsiHYzfCJTx7kzy548RmVw" target="_blank" rel="noopener">
           <span class="ttl">公司欠债，挂名法人被限高怎么办？上海法院"两步走"胜诉策略</span>
           <span class="dt">2026-05-26</span>
         </a>
       </li>
       <li class="reveal">
-        <a href="#">
-          <span class="ttl">最高院明确：公司进入清算后，股东仍可提起代表诉讼</span>
-          <span class="dt">2026-07-29</span>
+        <a href="https://mp.weixin.qq.com/s/yc1txqLMv9WxtnTGSt1TLA" target="_blank" rel="noopener">
+          <span class="ttl">小股东的大武器（四）：股东代表诉讼的前置程序</span>
+          <span class="dt">2025-12-12</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="https://mp.weixin.qq.com/s/ewzMw6IE-6yX4PZPYLwGKQ" target="_blank" rel="noopener">
+          <span class="ttl">隐名股东如何"显名"？一文讲清股东资格确认纠纷的实务难点与应对策略</span>
+          <span class="dt">2025-12-08</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="https://mp.weixin.qq.com/s/sjkssz31G3IH_OquR0z2eQ" target="_blank" rel="noopener">
+          <span class="ttl">小股东的大武器（三）：谁能提起股东代表诉讼？</span>
+          <span class="dt">2025-09-10</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="https://mp.weixin.qq.com/s/JL8466MYQaGu77tE8cxtLQ" target="_blank" rel="noopener">
+          <span class="ttl">小股东的大武器（二）：引发代表诉讼的情形与责任形式</span>
+          <span class="dt">2025-09-09</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="https://mp.weixin.qq.com/s/ehElDxNz34XtUqbx_eRqFw" target="_blank" rel="noopener">
+          <span class="ttl">小股东的大武器：股东代表诉讼全攻略（一）</span>
+          <span class="dt">2025-08-29</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="https://mp.weixin.qq.com/s/6saEldnQHOC4Ca584-j8Vw" target="_blank" rel="noopener">
+          <span class="ttl">公司欠债，法代限高？挂名法定代表人如何自救</span>
+          <span class="dt">2025-08-14</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="https://mp.weixin.qq.com/s/O99WdFx9xvzsh9tM2MxJxw" target="_blank" rel="noopener">
+          <span class="ttl">股东注意！0元转让股权 ≠ 0税负</span>
+          <span class="dt">2025-08-10</span>
         </a>
       </li>
     </ul>
 
-    <p class="art-note reveal">* 更多实务文章请关注公众号「程律视界-Law&amp;Beyond」</p>
+    <p class="art-note reveal"><span class="zh-text">* 更多实务文章请关注公众号「程律视界-Law&amp;Beyond」</span><span class="en-text">* For more articles, follow the WeChat blog "Law&amp;Beyond" (in Chinese)</span></p>
   </div>
 </section>
 
@@ -961,32 +1028,32 @@ footer .fbrand{color:rgba(255,255,255,.72);font-size:14.5px;margin-bottom:8px;
   <div class="glow glow-1"></div>
   <div class="wrap">
     <div class="contact-inner">
-      <h2 class="reveal">联系方式</h2>
-      <p class="sub reveal d1">如您在公司股权、股东纠纷、劳动争议或商事争议方面需要法律支持，欢迎联系。</p>
+      <h2 class="reveal"><span class="zh-text">联系方式</span><span class="en-text">Contact</span></h2>
+      <p class="sub reveal d1"><span class="zh-text">如您在公司股权、股东纠纷、劳动争议或商事争议方面需要法律支持，欢迎联系。</span><span class="en-text">For legal support in equity disputes, shareholder matters, labor disputes or commercial litigation, feel free to reach out.</span></p>
 
       <div class="contact-grid">
         <div class="contact-item reveal">
-          <div class="k">Email</div>
+          <div class="k"><span class="zh-text">电子邮箱</span><span class="en-text">Email</span></div>
           <div class="v"><a href="mailto:yijing.cheng@mhplawyer.com">yijing.cheng@mhplawyer.com</a></div>
         </div>
         <div class="contact-item reveal d1">
-          <div class="k">Phone / WeChat</div>
+          <div class="k"><span class="zh-text">电话 / 微信</span><span class="en-text">Phone / WeChat</span></div>
           <div class="v">17701753675</div>
         </div>
         <div class="contact-item reveal d2">
-          <div class="k">公众号</div>
+          <div class="k"><span class="zh-text">微信公众号</span><span class="en-text">WeChat Blog</span></div>
           <div class="v">程律视界-Law&amp;Beyond</div>
         </div>
         <div class="contact-item reveal d3">
-          <div class="k">律所官网</div>
+          <div class="k"><span class="zh-text">律所官网</span><span class="en-text">Firm Website</span></div>
           <div class="v"><a href="https://www.mhplawyer.com/" target="_blank" rel="noopener">www.mhplawyer.com</a></div>
         </div>
       </div>
 
       <div class="contact-foot reveal d4">
-        上海市静安区南京西路1717号会德丰国际广场7楼　｜　<a href="https://www.mhplawyer.com/" target="_blank" rel="noopener" style="color:rgba(255,255,255,.8)">上海市君悦律师事务所官网</a><br><br>
-        本网站内容仅为法律实务分享，不构成法律意见或建立律师-客户关系。<br>
-        案件结果受多种因素影响，具体请咨询专业律师。
+        <span class="zh-text">上海市静安区南京西路1717号会德丰国际广场7楼　｜　</span><span class="en-text">7F, Wheelock Square, 1717 Nanjing West Road, Jing'an, Shanghai　｜　</span><a href="https://www.mhplawyer.com/" target="_blank" rel="noopener" style="color:rgba(255,255,255,.8)"><span class="zh-text">上海市君悦律师事务所官网</span><span class="en-text">MHP Law Firm Website</span></a><br><br>
+        <span class="zh-text">本网站内容仅为法律实务分享，不构成法律意见或建立律师-客户关系。<br>案件结果受多种因素影响，具体请咨询专业律师。</span>
+        <span class="en-text">This website is for general professional sharing only and does not constitute legal advice or create an attorney-client relationship.<br>Case outcomes depend on many factors; please consult a qualified lawyer for your specific matter.</span>
       </div>
     </div>
   </div>
@@ -994,7 +1061,7 @@ footer .fbrand{color:rgba(255,255,255,.72);font-size:14.5px;margin-bottom:8px;
 
 <footer>
   <div class="wrap">
-    <div class="fbrand">程轶婧 律师 · <a href="https://www.mhplawyer.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">上海市君悦律师事务所</a></div>
+    <div class="fbrand"><span class="zh-text">程轶婧 律师 · </span><span class="en-text">Yijing Cheng, Attorney · </span><a href="https://www.mhplawyer.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="zh-text">上海市君悦律师事务所</span><span class="en-text">MHP Law Firm</span></a></div>
     © 2026 Yijing Cheng · MHP Law Firm　|　Shanghai · China
   </div>
 </footer>
@@ -1027,6 +1094,20 @@ footer .fbrand{color:rgba(255,255,255,.72);font-size:14.5px;margin-bottom:8px;
   };
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
+})();
+
+/* 中英双语切换 */
+function setLang(lang){
+  document.body.classList.toggle('lang-en', lang === 'en');
+  document.getElementById('btn-zh').classList.toggle('active', lang !== 'en');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.documentElement.lang = (lang === 'en') ? 'en' : 'zh-CN';
+  try{ localStorage.setItem('site-lang', lang); }catch(e){}
+}
+(function(){
+  var saved = 'zh';
+  try{ saved = localStorage.getItem('site-lang') || 'zh'; }catch(e){}
+  if(saved === 'en'){ setLang('en'); }
 })();
 </script>
 
