@@ -14,13 +14,15 @@
 <meta property="og:description" content="专注公司法、股东纠纷、公司治理、劳动争议与商事争议解决，中美涉外律师，中英文均可工作">
 <meta property="og:locale" content="zh_CN">
 
-<!-- ===== 访问统计配置（Supabase） ===== -->
-<!-- 部署时请把下面两个值替换成你自己的 Supabase 项目信息（见部署指南） -->
+<!-- ===== 访问统计（百度统计） ===== -->
 <script>
-  window.__STATS_CONFIG__ = {
-    SUPABASE_URL: "https://hjvqbxfhflkgssmflnlm.supabase.co",
-    SUPABASE_ANON_KEY: "sb_publishable_AAt0wVjl8D9DZELU6usF5g_IFUH2fjN"
-  };
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?27c2af4fdf73cc4dae56706b9cd1dbcf";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
 </script>
 
 <!-- ===== Google Analytics (GA4) 预留位 ===== -->
@@ -1129,48 +1131,6 @@ function setLang(lang){
   var saved = 'zh';
   try{ saved = localStorage.getItem('site-lang') || 'zh'; }catch(e){}
   if(saved === 'en'){ setLang('en'); }
-})();
-</script>
-
-<!-- ===== 访问统计打点（Supabase） ===== -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-(function(){
-  var cfg = window.__STATS_CONFIG__ || {};
-  // 未配置 Supabase 时静默跳过（不影响网站正常显示）
-  if(!cfg.SUPABASE_URL || cfg.SUPABASE_URL.indexOf('YOUR-PROJECT') !== -1){ return; }
-  if(!cfg.SUPABASE_ANON_KEY || cfg.SUPABASE_ANON_KEY.indexOf('YOUR-ANON-KEY') !== -1){ return; }
-
-  function classifyUA(ua){
-    ua = (ua || '').toLowerCase();
-    var botPatterns = /bot|crawler|spider|slurp|bingpreview|bytespider|gptbot|chatgpt|claude|anthropic|perplexity|googlebot|adsbot|mediapartners|facebookexternalhit|whatsapp|telegrambot|python-requests|curl|wget|headless|phantom|puppeteer|selenium|scrapy|baiduspider|360spider|sogou|yisouspider/i;
-    if(botPatterns.test(ua)){ return 'bot'; }
-    return 'human';
-  }
-
-  function push(){
-    var ua = navigator.userAgent || '';
-    var payload = {
-      user_agent: ua,
-      category: classifyUA(ua),
-      page: window.location.pathname || '/',
-      lang: (document.documentElement.lang || 'zh-CN'),
-      screen: (window.screen ? window.screen.width + 'x' + window.screen.height : ''),
-      referrer: document.referrer || '',
-      created_at: new Date().toISOString()
-    };
-
-    try{
-      var sb = window.supabase.createClient(cfg.SUPABASE_URL, cfg.SUPABASE_ANON_KEY);
-      sb.from('visits').insert([payload]).then(function(){ /* 静默，忽略上报结果 */ });
-    }catch(e){ /* 静默，统计失败不影响网站 */ }
-  }
-
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', push);
-  } else {
-    push();
-  }
 })();
 </script>
 
