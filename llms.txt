@@ -38,6 +38,17 @@
 - Formation of a frontier-technology company in North America
 - Multiple financing rounds of a technology company (identified and proposed fixes for conflicting terms); bankruptcy liquidation with a share-swap scheme; guarantor liability limited to the agreed scope
 
-## Writing
+## Writing (articles on this site)
 
-- WeChat official account (公众号) 「程律视界-Law&Beyond」 (Chinese): series on shareholder derivative actions (7 parts), nominal legal representatives facing consumption restrictions, nominee shareholders becoming registered shareholders, tax on nil-consideration share transfers
+- [挂名法定代表人被限高，怎么解除？](https://chengyijing.github.io/articles/guaming-fading-daibiao-ren-xian-gao-zijiu.html)
+- [股东代表诉讼怎么打？小股东维权的完整流程](https://chengyijing.github.io/articles/gudong-daibiao-susong-liucheng.html)
+- [股东代表诉讼能告谁？哪些情形可以起诉](https://chengyijing.github.io/articles/gudong-daibiao-susong-shiyou.html)
+- [谁能提起股东代表诉讼？股东资格条件详解](https://chengyijing.github.io/articles/gudong-daibiao-susong-zige.html)
+- [隐名股东如何“显名”？股东资格确认纠纷实务](https://chengyijing.github.io/articles/yinming-gudong-xianming.html)
+- [股东代表诉讼的前置程序：什么情况可以“直接起诉”？](https://chengyijing.github.io/articles/gudong-daibiao-susong-qianzhi-chengxu.html)
+- [上海法院最新判例：挂名法人涤除登记的“两步走”胜诉策略](https://chengyijing.github.io/articles/guaming-faren-xian-gao-liang-bu-zou.html)
+- [股东代表诉讼与公司自己起诉“撞车”，法院怎么处理？](https://chengyijing.github.io/articles/gudong-daibiao-susong-chongtu.html)
+- [股东代表诉讼的三大暗礁：执行、调解、撤诉](https://chengyijing.github.io/articles/gudong-daibiao-susong-jieduan-shang.html)
+- [公司清算期间，股东还能提起代表诉讼吗？](https://chengyijing.github.io/articles/gudong-daibiao-susong-qingsuan.html)
+
+- WeChat official account (公众号) 「程律视界-Law&Beyond」 (Chinese): series on shareholder derivative actions, nominal legal representatives facing consumption restrictions, nominee shareholders becoming registered shareholders
