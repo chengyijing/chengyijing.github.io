@@ -24,4 +24,4 @@ User-agent: Sogou
 Allow: /
 Disallow: /stats.html
 
-Sitemap: https://chengyijing.github.io/sitemap.xml
+Sitemap: https://chengyijing.com/sitemap.xml

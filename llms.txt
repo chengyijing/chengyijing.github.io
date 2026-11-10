@@ -5,8 +5,8 @@
 
 ## Pages
 
-- [中文主页（面向国内客户）](https://chengyijing.github.io/): 能处理的问题、涉外事务、代表业绩（已脱敏）、常见问题、实务文章、履历与联系方式
-- [English profile (for foreign clients)](https://chengyijing.github.io/en/): situations she helps with, selected experience, working with a Chinese lawyer from abroad, FAQ, background and contact
+- [中文主页（面向国内客户）](https://chengyijing.com/): 能处理的问题、涉外事务、代表业绩（已脱敏）、常见问题、实务文章、履历与联系方式
+- [English profile (for foreign clients)](https://chengyijing.com/en/): situations she helps with, selected experience, working with a Chinese lawyer from abroad, FAQ, background and contact
 
 ## Key facts
 
@@ -40,15 +40,15 @@
 
 ## Writing (articles on this site)
 
-- [挂名法定代表人被限高，怎么解除？](https://chengyijing.github.io/articles/guaming-fading-daibiao-ren-xian-gao-zijiu.html)
-- [股东代表诉讼怎么打？小股东维权的完整流程](https://chengyijing.github.io/articles/gudong-daibiao-susong-liucheng.html)
-- [股东代表诉讼能告谁？哪些情形可以起诉](https://chengyijing.github.io/articles/gudong-daibiao-susong-shiyou.html)
-- [谁能提起股东代表诉讼？股东资格条件详解](https://chengyijing.github.io/articles/gudong-daibiao-susong-zige.html)
-- [隐名股东如何“显名”？股东资格确认纠纷实务](https://chengyijing.github.io/articles/yinming-gudong-xianming.html)
-- [股东代表诉讼的前置程序：什么情况可以“直接起诉”？](https://chengyijing.github.io/articles/gudong-daibiao-susong-qianzhi-chengxu.html)
-- [上海法院最新判例：挂名法人涤除登记的“两步走”胜诉策略](https://chengyijing.github.io/articles/guaming-faren-xian-gao-liang-bu-zou.html)
-- [股东代表诉讼与公司自己起诉“撞车”，法院怎么处理？](https://chengyijing.github.io/articles/gudong-daibiao-susong-chongtu.html)
-- [股东代表诉讼的三大暗礁：执行、调解、撤诉](https://chengyijing.github.io/articles/gudong-daibiao-susong-jieduan-shang.html)
-- [公司清算期间，股东还能提起代表诉讼吗？](https://chengyijing.github.io/articles/gudong-daibiao-susong-qingsuan.html)
+- [挂名法定代表人被限高，怎么解除？](https://chengyijing.com/articles/guaming-fading-daibiao-ren-xian-gao-zijiu.html)
+- [股东代表诉讼怎么打？小股东维权的完整流程](https://chengyijing.com/articles/gudong-daibiao-susong-liucheng.html)
+- [股东代表诉讼能告谁？哪些情形可以起诉](https://chengyijing.com/articles/gudong-daibiao-susong-shiyou.html)
+- [谁能提起股东代表诉讼？股东资格条件详解](https://chengyijing.com/articles/gudong-daibiao-susong-zige.html)
+- [隐名股东如何“显名”？股东资格确认纠纷实务](https://chengyijing.com/articles/yinming-gudong-xianming.html)
+- [股东代表诉讼的前置程序：什么情况可以“直接起诉”？](https://chengyijing.com/articles/gudong-daibiao-susong-qianzhi-chengxu.html)
+- [上海法院最新判例：挂名法人涤除登记的“两步走”胜诉策略](https://chengyijing.com/articles/guaming-faren-xian-gao-liang-bu-zou.html)
+- [股东代表诉讼与公司自己起诉“撞车”，法院怎么处理？](https://chengyijing.com/articles/gudong-daibiao-susong-chongtu.html)
+- [股东代表诉讼的三大暗礁：执行、调解、撤诉](https://chengyijing.com/articles/gudong-daibiao-susong-jieduan-shang.html)
+- [公司清算期间，股东还能提起代表诉讼吗？](https://chengyijing.com/articles/gudong-daibiao-susong-qingsuan.html)
 
 - WeChat official account (公众号) 「程律视界-Law&Beyond」 (Chinese): series on shareholder derivative actions, nominal legal representatives facing consumption restrictions, nominee shareholders becoming registered shareholders
